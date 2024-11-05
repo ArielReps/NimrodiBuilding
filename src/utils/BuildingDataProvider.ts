@@ -10,37 +10,19 @@ interface Floor {
 
 const useBuildingData = () => {
   const [buildingData, setBuildingData] = useState<Floor[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const response = await import('../data/building.json');
-        setBuildingData(response.default);
-      } catch (error) {
-        console.error("Failed to load building data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  //FILL HERE LOGIC TO SET THE BUILDING DATA
 
-  const getFloorByName = (floorName: string): Floor | undefined => {
-    return buildingData.find(floor => floor.name === floorName);
-  };
+
   const getFloorByIndex = (floorIndex:number): Floor |undefined =>
   {
-    return buildingData[floorIndex];
+    //FILL HERE
   }
   const getListOfActivities = ():string[]=>{
-    return buildingData.map((e:Floor) => e.activity)
+    //FILL HERE
   }
   return {
     buildingData,
-    loading,
-    getFloorByName,
     getFloorByIndex,
     getListOfActivities
   };
