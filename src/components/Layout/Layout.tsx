@@ -20,7 +20,7 @@ const Layout: React.FC = () => {
         <h1>מגדל נמרודי</h1>
         <div className="nav-links">
             <Link to="/">Home</Link>
-          {floorAccess.map((floor: boolean, index: number) => (
+          {floorAccess.map((_: boolean, index: number) => (
             <Link key={index} to={`/floor/${index}`}>
               {getFloorByIndex(index)?.purpose || `Floor ${index + 1}`}
             </Link>
