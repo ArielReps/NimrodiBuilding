@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import floorAccessReducer from './floorreducer'; // Import the items reducer
+import floorAccessReducer from './floorreducer'; 
 import rolesReducer from './rolereducer'
 const store = configureStore({
   reducer: {
-    floorAccess: floorAccessReducer, // Combining reducers if necessary
+    floorAccess: floorAccessReducer, 
     role: rolesReducer
   },
 });
